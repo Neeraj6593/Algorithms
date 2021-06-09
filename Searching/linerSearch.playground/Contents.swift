@@ -5,6 +5,7 @@ func linerSearch<T:Equatable>(data: [Any],element:Any, type:T.Type)->(Bool,Int){
     for i in 0 ..< data.count{
         if (data[i] as? T)  == (element as? T){
             result = (true,i)
+            return result
         }
     }
     return result
